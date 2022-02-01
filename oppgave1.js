@@ -21,10 +21,10 @@ let animalOne = new Animal(
 console.log(animalOne);
 
 let animalTwo = new Animal(
-  "fugl",
-  "måke",
-  "norge",
-  "hvit og grå",
+  "Fugl",
+  "Måke",
+  "Norge",
+  "Hvit og grå",
   "<img src = https://cdn.pixabay.com/photo/2018/02/16/22/08/bird-3158784_960_720.jpg>"
 );
 
@@ -36,7 +36,7 @@ let imgCardOne = document.getElementById("img-container");
 
 speciesCardOne.innerHTML = "Art: " + animalOne.species;
 nameCardOne.innerHTML = "Navn: " + animalOne.name;
-countryCardOne.innerHTML = animalOne.color;
+countryCardOne.innerHTML = "Farge: " + animalOne.color;
 colorCardOne.innerHTML = animalOne.country;
 imgCardOne.innerHTML = animalOne.imgUrl;
 
@@ -51,3 +51,15 @@ nameCardTwo.innerHTML = animalTwo.name;
 countryCardTwo.innerHTML = animalTwo.color;
 colorCardTwo.innerHTML = animalTwo.country;
 imgCardTwo.innerHTML = animalTwo.imgUrl;
+
+function feedAnimal() {
+  alert(animalOne.name + " is now eating!");
+  let foodAnimalOne = prompt("Hva vil du mate " + animalOne.name + " med?");
+  alert(animalOne.name + " ate a portion of " + foodAnimalOne);
+}
+
+function feedAnimalTwo() {
+  console.log(animalTwo.name + " is now eating!");
+  let foodAnimalTwo = prompt("Hva vil du mate " + animalTwo.name + " med?");
+  alert(animalTwo.name + " ate a portion of " + foodAnimalTwo);
+}
